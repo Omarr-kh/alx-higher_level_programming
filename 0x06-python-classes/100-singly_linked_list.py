@@ -6,6 +6,11 @@ class Node:
     """Node class for a singly linked list"""
 
     def __init__(self, data, next_node=None):
+        """Constructor for Node
+        Args:
+            data : the data noce will hold
+            next_node : the next node
+        """
         self.data = data
         self.next_node = next_node
 
@@ -34,6 +39,7 @@ class SinglyLinkedList:
     """singly linked list class"""
 
     def __init__(self):
+        """Constructor for linked list"""
         self.__head = None
 
     def sorted_insert(self, value):
