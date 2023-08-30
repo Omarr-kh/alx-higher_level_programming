@@ -3,4 +3,8 @@
 
 
 class Square:
-    pass
+    def __init__(self):
+        """Constructor.
+
+        Args:
+        """
