@@ -14,7 +14,7 @@ Usage
 
 ::
 
-    >>> matrix_divided = from 2-matrix_divided import matrix_divided
+    >>> from 2-matrix_divided import matrix_divided
     >>> matrix = [
     ...     [5, 10, 15],
     ...     [20, 25, 30]

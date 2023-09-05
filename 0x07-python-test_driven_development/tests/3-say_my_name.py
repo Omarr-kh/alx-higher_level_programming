@@ -1,0 +1,74 @@
+# 3-say_my_name.txt
+
+==============================
+How to Use 3-say_my_name.py
+==============================
+
+This module defines function ``say_my_name(first_name, last_name="")``.
+
+Usage
+=====
+
+``say_my_name(...)`` "prints My name is <first name> <last name>"
+
+::
+
+    >>> from 3-say_my_name import say_my_name
+    >>> say_my_name("Omar", "Khaled")
+    My name is Omar Khaled
+
+::
+
+    >>> say_my_name("Omar Khaled", "Omar")
+    My name is Omar Khaled Omar
+
+Second parameter is optional
+
+::
+
+    >>> say_my_name("Omar")
+    My name is Omar
+
+Invalid Parameter Types
+==========================
+
+first_name and last_name must be strings otherwise, a TypeError is raised.
+
+::
+
+    >>> say_my_name(25, "Omar")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Omar", 25)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"omar": 12, "age": 15}, "Khaled")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Omar", [25, 15, "omar"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+One name must be provided at least
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
