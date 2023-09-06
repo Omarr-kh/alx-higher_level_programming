@@ -14,7 +14,7 @@ and ``:``.
 
 ::
 
-    >>> from 5-text_indentation import text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text_indentation("Testing?")
     Testing?
     <BLANKLINE>
@@ -63,7 +63,7 @@ New lines are printed as normal.
     This is a new line! Look:
     <BLANKLINE>
     <BLANKLINE>
-    nNice.
+    Nice.
     <BLANKLINE>
 
 ::
