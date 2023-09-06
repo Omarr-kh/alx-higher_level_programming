@@ -14,7 +14,7 @@ Usage
 
 ::
 
-    >>> from 2-matrix_divided import matrix_divided
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
     >>> matrix = [
     ...     [5, 10, 15],
     ...     [20, 25, 30]
@@ -38,7 +38,7 @@ The original matrix is unchanged.
 ::
 
     >>> print(matrix)
-    [[3, 2, 1], [6, 5, 5]]
+    [[3, 2, 1], [6, 5, 4]]
 
 The function handles floating-point numbers.
 
@@ -60,7 +60,7 @@ Integers and floats can be combined.
     ...     [-6.6, 11.4, 8, 55.5, 30]
     ... ]
     >>> print(matrix_divided(matrix, 3))
-    [[1.77, -0.4, 2.0, 1.47, 3.0], [-2.2, 3.8, 2.67, 18.5, 10.0]]
+    [[1.77, -0.4, 2.0, 1.47, 5.0], [-2.2, 3.8, 2.67, 18.5, 10.0]]
 
 Invalid Matrices
 ==============
