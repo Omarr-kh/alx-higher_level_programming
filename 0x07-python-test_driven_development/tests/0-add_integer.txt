@@ -6,15 +6,15 @@ How to Use 0-add_integer.py
 
 This module defines an addition function ``add_integer(a, b=98)``.
 
-Numbers
+Usage
 =====
 
-``add_integer()``` returns the addition of its two arguments. For numbers,
+``add_integer(...)``` returns the addition of its two arguments. For numbers,
 that value is equivalent to using the ``+`` operator.
 
 ::
 
-    >>> from 0-add_integer import add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(1, 1)
     2
 
