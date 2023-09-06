@@ -2,6 +2,7 @@
 # 0-add_integer.py
 """ Integer addition function defintion"""
 
+
 def add_integer(a, b=98):
     """ Returns a + b.
 
