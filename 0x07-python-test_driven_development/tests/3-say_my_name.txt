@@ -13,7 +13,7 @@ Usage
 
 ::
 
-    >>> from 3-say_my_name import say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
     >>> say_my_name("Omar", "Khaled")
     My name is Omar Khaled
 
@@ -26,8 +26,8 @@ Second parameter is optional
 
 ::
 
-    >>> say_my_name("Omar")
-    My name is Omar
+    >>> say_my_name("bob")
+    My name is bob 
 
 Invalid Parameter Types
 ==========================
