@@ -9,13 +9,13 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """Initialize a rectangle"""
         self.integer_validator("width", width)
-        self.width = width
+        self.__width = width
         self.integer_validator("height", height)
-        self.height = height
+        self.__height = height
 
     def area(self):
         """returns area of rectangle"""
-        return self.height * self.width
+        return self.__height * self.__width
     
     def __str__(self):
-        return f"[{self.__class__.__name__}] {self.width}/{self.height}"
+        return f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
