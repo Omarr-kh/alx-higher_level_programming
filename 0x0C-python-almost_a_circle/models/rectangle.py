@@ -20,10 +20,10 @@ class Rectangle(Base):
             TypeError: If x or y is not an int.
             ValueError: If x or y < 0.
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
@@ -83,18 +83,19 @@ class Rectangle(Base):
 
     def area(self):
         """returns the area of the rectangle"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """displays the Rectangle with the '#' character"""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             print("")
             return
 
-        [print("") for i in range(self.__y)]
-        for _ in range(self.__height):
-            [print("", end="") for k in range(self.__x)]
-            [print("#", end="") for j in range(self.__width)]
+        [print("") for i in range(self.y)]
+        for _ in range(self.height):
+            [print(" ", end="") for k in range(self.x)]
+            [print("#", end="") for j in range(self.width)]
+            print("")
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
@@ -113,49 +114,49 @@ class Rectangle(Base):
             for arg in args:
                 if counter == 0:
                     if arg is None:
-                        self.__init__(self.__width,
-                                      self.__height, self.__x, self.__y)
+                        self.__init__(self.width,
+                                      self.height, self.x, self.y)
                     else:
                         self.id = arg
                 elif counter == 1:
-                    self.__width = arg
+                    self.width = arg
                 elif counter == 2:
-                    self.__height = arg
+                    self.height = arg
                 elif counter == 3:
-                    self.__x = arg
+                    self.x = arg
                 elif counter == 4:
-                    self.__y = arg
+                    self.y = arg
                 counter += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, val in kwargs.items():
                 if k == "id":
                     if val is None:
-                        self.__init__(self.__width,
-                                      self.__height, self.__x, self.__y)
+                        self.__init__(self.width,
+                                      self.height, self.x, self.y)
                     else:
-                        self.__id = val
+                        self.id = val
                 elif k == "width":
-                    self.__width = val
+                    self.width = val
                 elif k == "height":
-                    self.__height = val
+                    self.height = val
                 elif k == "x":
-                    self.__x = val
+                    self.x = val
                 elif k == "y":
-                    self.__y = val
+                    self.y = val
 
     def __str__(self):
         """Return the print() and str() representation of Rectangle."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                                                       self.__y, self.__width,
-                                                       self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)
 
     def to_dictionary(self):
         """returns dict representation of the class"""
         return {
             "id": self.id,
-            "width": self.__width,
-            "height": self.__height,
-            "x": self.__x,
-            "y": self.__y
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }

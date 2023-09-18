@@ -92,5 +92,5 @@ class Base:
             with open(fname, "r") as f:
                 list_dicts = Base.from_json_string(f.read())
                 return [cls.create(**dict) for dict in list_dicts]
-        except FileNotFoundError:
+        except IOError:
             return []
