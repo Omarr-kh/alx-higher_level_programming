@@ -8,10 +8,7 @@ import requests
 
 
 def main():
-    if len(argv) > 1:
-        data = {"q": argv[1]}
-    else:
-        data = {"q": ""}
+    data = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
     response = requests.post('http://0.0.0.0:5000/search_user', data=data)
 
     try:
