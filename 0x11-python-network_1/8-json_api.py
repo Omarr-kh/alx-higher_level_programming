@@ -3,20 +3,26 @@
     script that takes in a letter and sends a POST request to 
     http://0.0.0.0:5000/search_user with the letter as a parameter.
 '''
-import sys
+from sys import argv
 import requests
 
 
 def main():
-    data = {"q": sys.argv[1] if len(sys.argv) > 1 else ""}
+    if len(argv) > 1:
+        data = {"q": argv[1]}
+    else:
+        data = {"q": ""}
+
     response = requests.post('http://0.0.0.0:5000/search_user', data=data)
 
     try:
         data_json = response.json()
-        if 'id' in data_json and 'name' in dict_json:
+
+        if 'id' in data_json and 'name' in data_json:
             print('[{}] {}'.format(data_json['id'], data_json['name']))
         else:
             print('No result')
+
     except Exception:
         print('Not a valid JSON')
 
