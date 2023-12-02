@@ -13,7 +13,7 @@ def main():
 
     try:
         data_json = response.json()
-        if 'id' in dict_json and 'name' in dict_json:
+        if 'id' in data_json and 'name' in dict_json:
             print('[{}] {}'.format(data_json['id'], data_json['name']))
         else:
             print('No result')
