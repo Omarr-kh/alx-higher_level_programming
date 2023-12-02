@@ -6,12 +6,14 @@
 import urllib.request
 import sys
 
+
 def main():
     url = sys.argv[1]
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as r:
         headers = r.headers
         print(headers['X-Request-Id'])
+
 
 if __name__ == '__main__':
     main()
