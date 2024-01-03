@@ -9,7 +9,7 @@ request(urlAPI, function (error, response, body) {
   }
 });
 
-function printChars(movieCharacters, i) {
+function printChars (movieCharacters, i) {
   request(movieCharacters[i], function (error, response, body) {
     if (!error) {
       console.log(JSON.parse(body).name);
